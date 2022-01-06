@@ -13,16 +13,10 @@ export class ItemAdminComponent {
   @Input() type: string;
   @Input() product: Product;
 
-  constructor(private cart: CartService, private alert: AlertService) {}
+  constructor(private alert: AlertService) {}
 
   public removeProduct(product: any): void {
     console.log('Borrar', product);
-    this.alert.presentAlertDeleteItem().catch((resp) => {
-      console.log(resp);
-
-      if (resp) {
-        this.cart.removeProduct(product);
-      }
-    });
+    this.alert.presentAlertDeleteItem(product);
   }
 }

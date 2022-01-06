@@ -6,6 +6,8 @@ import {
 } from '@ionic/core';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { Product } from '../../models/cart.model';
+import { CartService } from '../cart/cart.service';
 
 export interface AlertButton {
   text: string;
@@ -37,7 +39,8 @@ export interface AlertInput {
 export class AlertService {
   constructor(
     public alertController: AlertController,
-    private router: Router
+    private router: Router,
+    private cart: CartService
   ) {}
 
   async presentAlertTypeUser() {
@@ -103,8 +106,8 @@ export class AlertService {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  async presentAlertDeleteItem(): Promise<boolean> {
-    let deleteItem = false;
+  async presentAlertDeleteItem(item: Product) {
+    //let deleteItem = false;
     const alert = await this.alertController.create({
       cssClass: 'alert-delete',
       header: 'Cuidado',
@@ -114,7 +117,7 @@ export class AlertService {
         {
           text: 'Si',
           handler: () => {
-            deleteItem = true;
+            this.cart.removeProduct(item);
           },
         },
         {
@@ -124,6 +127,6 @@ export class AlertService {
     });
 
     await alert.present();
-    return deleteItem;
+    //return deleteItem;
   }
 }

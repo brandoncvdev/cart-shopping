@@ -34,6 +34,7 @@ export class AddItemAdminPage implements OnInit {
       value.id = generateID;
       this.cart.addProduct(value);
       this.alert.presentAlertRedirectAdmin();
+      this.form.reset();
     } else {
       this.toast.presentToast('Revisa los campos', 'warning');
     }

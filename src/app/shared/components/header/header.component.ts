@@ -34,6 +34,6 @@ export class HeaderComponent implements OnInit {
   }
 
   public myCartShopping(): void {
-    this.router.navigate(['/home/mi-carrito']);
+    this.router.navigate(['/mi-carrito']);
   }
 }

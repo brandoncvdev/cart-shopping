@@ -8,6 +8,7 @@ import { Location } from '@angular/common';
 })
 export class HeaderAdminComponent {
   @Input() title: string;
+  @Input() backButton: boolean;
 
   constructor(private location: Location) {}
 

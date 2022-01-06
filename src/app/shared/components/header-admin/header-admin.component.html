@@ -1,5 +1,8 @@
 <ion-toolbar class="header-admin-bg">
   <ion-buttons class="text-center">
+    <ion-button *ngIf="backButton" (click)="backLocation()">
+      <ion-icon class="text15 text-white" name="arrow-back"></ion-icon>
+    </ion-button>
     <ion-title class="adjust-title fw500 text-white">{{
       title ? title : null
     }}</ion-title>

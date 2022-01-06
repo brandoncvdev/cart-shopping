@@ -23,8 +23,22 @@ const routes: Routes = [
       import('./pages/admin/admin.module').then((m) => m.AdminPageModule),
   },
   {
+    path: 'detalle-producto',
+    loadChildren: () =>
+      import('./pages/product-detail/product-detail.module').then(
+        (m) => m.ProductDetailPageModule
+      ),
+  },
+  {
+    path: 'mi-carrito',
+    loadChildren: () =>
+      import('./pages/cart-shopping/cart-shopping.module').then(
+        (m) => m.CartShoppingPageModule
+      ),
+  },
+  {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/login',
     pathMatch: 'full',
   },
 ];
