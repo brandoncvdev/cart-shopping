@@ -1,0 +1,39 @@
+<ion-grid>
+  <ion-row>
+    <div class="container-buttons-incremental">
+      <ion-col size="4" class="text-dark">
+        <ion-button
+          class="custom-button-cart"
+          color="medium"
+          fill="clear"
+          (click)="lessItem(product)"
+        >
+          <ion-icon
+            class="text1"
+            src="assets/icon/less.svg"
+            slot="icon-only"
+          ></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="4" class="text-dark fw600">
+        <div class="container-counter">
+          {{ product.qty }}
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button
+          class="custom-button-cart"
+          color="medium"
+          fill="clear"
+          (click)="addItem(product)"
+        >
+          <ion-icon
+            class="text1"
+            src="assets/icon/add.svg"
+            slot="icon-only"
+          ></ion-icon>
+        </ion-button>
+      </ion-col>
+    </div>
+  </ion-row>
+</ion-grid>

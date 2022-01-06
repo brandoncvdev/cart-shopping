@@ -1,0 +1,7 @@
+.container-items {
+  display: flex;
+  flex-wrap: wrap;
+  app-item {
+    width: 50%;
+  }
+}

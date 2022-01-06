@@ -1,0 +1,54 @@
+ion-card {
+  --background: #f0f1f5;
+  padding: 6px 6px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3px 0 6px 0;
+}
+
+.text-container {
+  background: white;
+  border-radius: 6px;
+  border-radius: 0px 0px 8px 8px;
+  padding: 2px 8px;
+}
+
+.full-height-row {
+  height: 100%;
+}
+
+.full-height-row > div {
+  align-items: start;
+}
+
+.text-admin-red {
+  color: #d15253;
+}
+
+.button-bg-admin {
+  --background: #f0f1f5;
+  --box-shadow: none;
+}
+
+.custom-col-admin {
+  display: flex;
+  align-items: end;
+}
+
+.container-buttons-admin {
+  display: flex;
+  flex-direction: row;
+  // width: 100%;
+  // text-align: end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  .button-admin {
+    --padding-end: 4px;
+    --padding-start: 0;
+  }
+}

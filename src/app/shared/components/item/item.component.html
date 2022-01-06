@@ -1,0 +1,44 @@
+<div [ngSwitch]="type">
+  <div *ngSwitchCase="'item-cart'">
+    <ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <img src="./assets/images/mac.png" />
+          </ion-col>
+          <ion-col size="8">
+            <ion-row>
+              <div class="text-dark fw600">{{ product.name }}</div>
+            </ion-row>
+            <ion-row class="full-height-row ion-justify-content-center">
+              <ion-col size="4">
+                <div class="text-dark fw700">
+                  {{ product.price ? "$ " + product.price : null }}
+                </div>
+              </ion-col>
+              <ion-col size="8">
+                <app-buttons-cart
+                  [product]="product"
+                  [p]="counter"
+                ></app-buttons-cart>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </div>
+  <div *ngSwitchDefault>
+    <ion-card href="/home/detalle-producto" class="card-item-cart">
+      <div class="image-container">
+        <img src="./assets/images/mac.png" />
+      </div>
+      <div class="text-container">
+        <div>{{ product.name }}</div>
+        <div class="text-dark fw700">
+          {{ product.price ? "$ " + product.price : null }}
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</div>

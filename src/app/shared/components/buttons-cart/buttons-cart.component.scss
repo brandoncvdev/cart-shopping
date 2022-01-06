@@ -1,0 +1,23 @@
+.custom-button-cart {
+  margin: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.container-counter {
+  text-align: center;
+  align-self: center;
+}
+
+.container-buttons-incremental {
+  background: #ffffff;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  height: 30px;
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-end">
+      <app-header></app-header>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-text class="text12 fw700 text-title-home">Hola Usuario</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text class="text08 fw700 text-gray"
+          >¿Vamos a comprar algo?</ion-text
+        >
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <div class="container-fancy-box">
+        <app-fancy-box *ngFor="let box of boxes"></app-fancy-box>
+      </div>
+    </ion-row>
+
+    <ion-row>
+      <app-list-items class="w-100"></app-list-items>
+    </ion-row>
+  </ion-grid>
+</ion-content>

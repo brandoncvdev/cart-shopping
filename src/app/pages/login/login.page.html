@@ -1,0 +1,80 @@
+<ion-content>
+  <div class="avatar-container-login">
+    <img src="/assets/images/logo-strappberry 2.png" alt="" />
+  </div>
+
+  <div class="form-container-login">
+    <div class="container-fancy"></div>
+    <ion-grid [formGroup]="form">
+      <ion-row>
+        <ion-input
+          class="inputs-app"
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        ></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <p
+          ion-text
+          class="text08 space-left"
+          *ngIf="errorControl('email') && controlTouched('email')"
+        >
+          <ion-text color="warning"> Campo requerido </ion-text>
+        </p>
+      </ion-row>
+
+      <ion-row>
+        <p
+          ion-text
+          class="text08 space-left"
+          *ngIf="errorControl('email', 'email') && controlTouched('email')"
+        >
+          <ion-text color="warning"> Verifica tu email </ion-text>
+        </p>
+      </ion-row>
+
+      <ion-row>
+        <ion-input
+          class="inputs-app"
+          type="password"
+          placeholder="Contraseña"
+          formControlName="password"
+        ></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <p
+          ion-text
+          class="text08 space-left"
+          *ngIf="errorControl('password') && controlTouched('password')"
+        >
+          <ion-text color="warning"> Campo requerido </ion-text>
+        </p>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-end">
+        <ion-button
+          class="button-log"
+          expand="block"
+          [strong]="true"
+          size="default"
+          (click)="submitForm()"
+          >Ingresar</ion-button
+        >
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<!-- Footer without a border -->
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="container-footer">
+      <ion-text> ¿Aún no tienes cuenta? </ion-text>
+      <ion-text> Registrate </ion-text>
+      <ion-text> Brandon | brandoning777@gmail.com </ion-text>
+    </div>
+  </ion-toolbar>
+</ion-footer>

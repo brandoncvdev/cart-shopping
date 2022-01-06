@@ -1,0 +1,32 @@
+// .custom-backgroud {
+//   background: white;
+// }
+
+// ion-toolbar {
+//   --background: #f0f1f5;
+// }
+
+.detail-product-image-container {
+  width: 100%;
+  height: 200px;
+  background: #f0f1f5;
+  display: flex;
+  padding: 8px;
+  border-radius: 0 0 20px 20px;
+
+  img {
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.detail-product-text-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  .detail-title-sub {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

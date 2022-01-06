@@ -1,0 +1,22 @@
+<app-header [type]="'back-location'" [title]="title"></app-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let item of items">
+      <app-item
+        [type]="'item-cart'"
+        [product]="item"
+        class="custom-item-cart"
+      ></app-item>
+    </ion-row>
+  </ion-grid>
+
+  <div class="total-container-cart fw600 text12">
+    <div>
+      <ion-text>Total</ion-text>
+      <ion-text class="text-blue-app">{{ '$' + total}}</ion-text>
+    </div>
+  </div>
+
+  <app-button-submit [text]="'Comprar ahora'"></app-button-submit>
+</ion-content>

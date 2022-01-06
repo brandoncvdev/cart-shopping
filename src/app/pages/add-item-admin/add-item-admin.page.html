@@ -1,0 +1,62 @@
+<app-header-admin [title]="'Agregar producto'"></app-header-admin>
+
+<ion-content>
+  <ion-grid [formGroup]="form">
+    <ion-row>
+      <div class="uploader-container">
+        <ion-img src="/assets/icon/file.svg"></ion-img>
+      </div>
+    </ion-row>
+
+    <ion-row>
+      <ion-input
+        class="inputs-app ft-20"
+        type="text"
+        placeholder="Nombre"
+        formControlName="name"
+      ></ion-input>
+    </ion-row>
+
+    <ion-row>
+      <p
+        ion-text
+        class="text08 space-left"
+        *ngIf="errorControl('name') && controlTouched('name')"
+      >
+        <ion-text color="warning"> Campo requerido </ion-text>
+      </p>
+    </ion-row>
+
+    <ion-row>
+      <ion-input
+        class="inputs-app ft-20"
+        type="text"
+        placeholder="Precio"
+        formControlName="price"
+      ></ion-input>
+    </ion-row>
+
+    <ion-row>
+      <p
+        ion-text
+        class="text08 space-left"
+        *ngIf="errorControl('price') && controlTouched('price')"
+      >
+        <ion-text color="warning"> La contraseña no coincide </ion-text>
+      </p>
+    </ion-row>
+
+    <ion-row>
+      <ion-textarea
+        [rows]="4"
+        placeholder="Descripción"
+        formControlName="description"
+        class="text-area-app ft-20"
+      ></ion-textarea>
+    </ion-row>
+  </ion-grid>
+  <app-button-submit
+    (click)="submitForm()"
+    [text]="'Guardar producto'"
+  ></app-button-submit>
+</ion-content>

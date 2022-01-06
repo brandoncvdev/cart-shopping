@@ -1,0 +1,33 @@
+<ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <img src="./assets/images/mac.png" />
+      </ion-col>
+      <ion-col size="8">
+        <ion-row>
+          <div class="text-dark fw600">{{ product.name }}</div>
+        </ion-row>
+        <ion-row class="full-height-row ion-justify-content-center">
+          <ion-col size="4">
+            <div class="text-admin-red fw700">
+              {{ product.price ? "$ " + product.price : null }}
+            </div>
+          </ion-col>
+          <ion-col size="8" class="full-height-row custom-col-admin"> </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="container-buttons-admin">
+    <ion-button class="button-bg-admin text12 button-admin">
+      <ion-icon src="/assets/icon/edit.svg"></ion-icon>
+    </ion-button>
+    <ion-button
+      class="button-bg-admin text12 button-admin"
+      (click)="removeProduct(product)"
+    >
+      <ion-icon src="/assets/icon/trash.svg"></ion-icon>
+    </ion-button>
+  </div>
+</ion-card>

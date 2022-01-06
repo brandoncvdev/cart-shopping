@@ -1,0 +1,24 @@
+<div [ngSwitch]="type">
+  <div *ngSwitchCase="'back-location'">
+    <ion-toolbar class="header-arrow-bg">
+      <ion-buttons class="text-center">
+        <ion-button (click)="backLocation()">
+          <ion-icon class="text15" name="arrow-back"></ion-icon>
+        </ion-button>
+        <ion-title class="adjust-title fw500 text-black">{{
+          title ? title : null
+        }}</ion-title>
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+  <div *ngSwitchDefault>
+    <ion-buttons class="header-cart-bg">
+      <ion-button (click)="myCartShopping()">
+        <ion-icon class="text15" src="./assets/icon/cartt.svg"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-badge *ngIf="counter > 0" color="primary" class="custom-badge-cart">{{
+      counter
+    }}</ion-badge>
+  </div>
+</div>
